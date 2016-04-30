@@ -1,0 +1,10 @@
+name: MaximizedClasses
+description: MaximizedClasses
+author: SimPlaysGames
+version: 1.0
+main: me.spigot.SimPlaysGames.MaximizedClasses
+commands:
+  changeclass:
+    description: Let's you change what class you are in.
+    usage: /changeclass
+    permission-massage: You don't have permission for this command!

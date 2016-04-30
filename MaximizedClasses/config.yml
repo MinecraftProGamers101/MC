@@ -1,0 +1,23 @@
+# MaximizedClasses by SimPlaysGames
+# Version 1.0
+
+factionWorld: Factions
+#Name of the class item
+ClassName1: Warrior
+ClassName2: Assasin
+ClassName3: Mage
+
+#Description of the item
+ClassLore1: ["Line one", "Line two", "Line three"]
+
+ClassLore2: 
+- "Line one"
+- "Line two"
+- "Line three"
+
+ClassLore3: Mage
+
+#What the PEX class is called
+PEXclass1: Warrior
+PEXclass2: Assasin
+PEXclass3: Mage
