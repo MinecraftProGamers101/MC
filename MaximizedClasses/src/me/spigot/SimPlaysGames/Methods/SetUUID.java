@@ -11,10 +11,11 @@ import me.spigot.SimPlaysGames.Register.UserDataConfig;
 
 public class SetUUID {
 	
+	//Global uuid Set instead of single class : for outside class usage
+	public static Set<UUID> uuids = new HashSet<>();
+	
     public static void setUUID(Player player, String group) {
     	int i = 0; //this int if for the VIP people, who get to choose their class once more
-    	//Adds one players UUID to Set of Members
-	Set<UUID> uuids = new HashSet<>();
         UserDataConfig userData = new UserDataConfig(MaximizedClasses.getInstance(), "UserData.yml"); // get the config test.yml, if it isn't exists it will be created
         FileConfiguration userDataConfig = userData.getConfig(); // get its config instance.
         String playerUUID = player.getUniqueId().toString(); //Makes the UUID a string        
