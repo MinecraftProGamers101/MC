@@ -55,6 +55,10 @@ public class InventoryClick implements Listener {
 		
 		//Item 1
 		if(item.getItemMeta().getDisplayName().equals(Menu.className1)){			//If the item is a compass do
+			if (SetUUID.uuids.contains(player.getUniqueId())) { //checks if the player has already choosen a class
+    				return; //return so it stops the player from choosing another class
+			}
+			
 			PermissionUser permissionUser = PermissionsEx.getUser(player);
 			permissionUser.removeGroup(PEXClass3);
 			permissionUser.removeGroup(PEXClass2);
@@ -68,6 +72,9 @@ public class InventoryClick implements Listener {
 		}
 		//Item 2
 		else if(item.getItemMeta().getDisplayName().equals(Menu.className2)){			//If the item is a compass do
+			if (SetUUID.uuids.contains(player.getUniqueId())) { //checks if the player has already choosen a class
+    				return; //return so it stops the player from choosing another class
+			}
 			PermissionUser permissionUser = PermissionsEx.getUser(player);
 			permissionUser.removeGroup(PEXClass1);
 			permissionUser.removeGroup(PEXClass3);
@@ -80,7 +87,10 @@ public class InventoryClick implements Listener {
 			SetUUID.setUUID(player, group);					//Adds UUID to list
 		}
 		//Item 3
-		else if(item.getItemMeta().getDisplayName().equals(Menu.className3)){			//If the item is a compass do
+		else if(item.getItemMeta().getDisplayName().equals(Menu.className3)){//If the item is a compass do
+			if (SetUUID.uuids.contains(player.getUniqueId())) { //checks if the player has already choosen a class
+    				return; //return so it stops the player from choosing another class
+			}
 			PermissionUser permissionUser = PermissionsEx.getUser(player);
 			permissionUser.removeGroup(PEXClass1);
 			permissionUser.removeGroup(PEXClass2);
@@ -93,11 +103,7 @@ public class InventoryClick implements Listener {
 			SetUUID.setUUID(player, group);					//Adds UUID to list
 		}
 		
-		
 		event.setCancelled(true);
 		player.closeInventory();
-		
 	}
-	
-	
 }
